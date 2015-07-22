@@ -1,0 +1,24 @@
+<html>
+<body>
+ <form method="post">
+        @if(model&&model.errors) {
+        <p>
+            <ul>
+                @model.errors.forEach(function(err){
+                <li>@err</li>
+                })
+            </ul>
+        </p>
+        }
+         <p>
+            <label>用户名称</label>
+            <input type="text" name="username" value="@model.username"  />
+        </p>
+        <p>
+            <label>用户密码</label>
+            <input type="text" name="password" value="@model.password" />
+        </p> 
+        <input type="submit" value="登入"/>
+    </form>
+</body>
+</html>
